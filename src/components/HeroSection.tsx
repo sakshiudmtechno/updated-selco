@@ -1,72 +1,72 @@
+import { ArrowRight, ShieldCheck, Leaf, Award } from "lucide-react";
 import heroImg from "@/assets/hero-woman.jpg";
-<img src="/selco.svg" />
+
 const HeroSection = () => {
   return (
-    <section className="relative h-[600px] md:h-[700px] overflow-hidden mt-[68px]">
-
-      {/* Background Image */}
+    <section id="home" className="relative min-h-[640px] md:min-h-[760px] overflow-hidden pt-20 md:pt-24">
       <img
         src={heroImg}
         alt="Clean water solutions by SELCO"
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover scale-105"
         style={{ objectPosition: "85% center" }}
+        loading="eager"
+        fetchPriority="high"
       />
 
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#071a35]/95 via-[#071a35]/80 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background" />
 
-      <div className="relative container mx-auto px-4 h-full flex items-center">
+      <div className="relative container mx-auto px-4 md:px-6 h-full flex items-center py-20 md:py-28">
         <div className="max-w-2xl animate-fade-up">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-white/10 backdrop-blur-md border border-white/20 text-cyan-200 mb-6">
+            <span className="w-1.5 h-1.5 rounded-full bg-cyan-300 animate-pulse" />
+            Trusted by 10,000+ families
+          </span>
 
-          {/* Heading */}
-          <h1 className="font-heading font-extrabold text-2xl md:text-3xl lg:text-5xl leading-tight mb-6">
-
-            <span className="block bg-gradient-to-r from-blue-800 to-blue-500 bg-clip-text text-transparent">
-              Advanced Water Treatment Solutions by
-            </span>
-
-            {/* 🔥 PERFECT SELCO TEXT LOGO */}
-            <span
-              className="block mt-2 text-[#3b5fbf] tracking-[4px]"
-              style={{
-                fontFamily: "'Exo 2', sans-serif",
-                fontWeight: 800,
-                transform: "skewX(-18deg) scaleX(1.15)",
-                display: "inline-block",
-                lineHeight: "1",
-                textShadow: "1px 0 0 #3b5fbf, -1px 0 0 #3b5fbf",
-              }}
-            >
+          <h1 className="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.05] mb-6 text-white">
+            Advanced Water
+            <span className="block">Treatment by</span>
+            <span className="block mt-2 bg-gradient-to-r from-cyan-300 via-sky-300 to-blue-400 bg-clip-text text-transparent">
               SELCO
             </span>
-
           </h1>
 
-          {/* Paragraph */}
-          <p className="mb-8 text-lg leading-relaxed max-w-lg text-blue-200">
+          <p className="mb-10 text-base md:text-lg leading-relaxed max-w-xl text-blue-100/90">
             Pioneering chemical-free water conditioning technology for homes,
             industries, and commercial establishments across India.
           </p>
 
-          {/* Buttons */}
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-4 mb-12">
             <a
               href="https://wa.me/919826155580"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3.5 rounded-lg font-heading font-semibold text-sm transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="group inline-flex items-center gap-2 gradient-bg text-white px-8 py-4 rounded-xl font-heading font-semibold text-sm transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-0.5"
             >
               Get Free Consultation
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </a>
 
             <a
               href="#about"
-              className="border border-white/30 text-white px-8 py-3.5 rounded-lg font-heading font-semibold text-sm hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
+              className="inline-flex items-center gap-2 border border-white/30 text-white px-8 py-4 rounded-xl font-heading font-semibold text-sm hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
             >
               Learn More
             </a>
           </div>
 
+          <div className="flex flex-wrap gap-6 md:gap-8 text-white/90">
+            {[
+              { icon: ShieldCheck, label: "Chemical Free" },
+              { icon: Leaf, label: "Eco Friendly" },
+              { icon: Award, label: "30+ Years" },
+            ].map((f) => (
+              <div key={f.label} className="flex items-center gap-2">
+                <f.icon className="w-5 h-5 text-cyan-300" />
+                <span className="text-sm font-medium">{f.label}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -2,9 +2,9 @@ import waterTestImg from "@/assets/water-test-hero.jpg";
 
 const ScheduleTestSection = () => {
   return (
-    <section className="py-24 bg-section-bg">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center gap-16">
+    <section className="section-pad bg-section-bg">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="flex flex-col md:flex-row items-center gap-12 lg:gap-16">
           <div className="md:w-1/2 animate-fade-up">
             <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase text-primary bg-primary/10 mb-4">
               Free Service

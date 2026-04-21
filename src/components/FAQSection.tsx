@@ -28,9 +28,9 @@ const FAQSection = () => {
   const [open, setOpen] = useState(0);
 
   return (
-    <section className="py-24 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col lg:flex-row gap-16">
+    <section className="section-pad bg-background">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
           <div className="lg:w-5/12">
             <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase text-primary bg-primary/10 mb-4">
               FAQ
@@ -55,7 +55,7 @@ const FAQSection = () => {
                   <span className="font-heading font-semibold text-sm text-heading pr-4">{f.q}</span>
                   <ChevronDown className={`w-5 h-5 text-primary shrink-0 transition-transform duration-300 ${open === i ? "rotate-180" : ""}`} />
                 </button>
-                <div className={`overflow-hidden transition-all duration-300 ${open === i ? "max-h-40 opacity-100" : "max-h-0 opacity-0"}`}>
+                <div className={`overflow-hidden transition-all duration-500 ${open === i ? "max-h-60 opacity-100" : "max-h-0 opacity-0"}`}>
                   <div className="px-5 pb-5">
                     <p className="text-body text-sm leading-relaxed">{f.a}</p>
                   </div>

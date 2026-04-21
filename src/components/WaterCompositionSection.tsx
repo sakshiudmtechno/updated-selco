@@ -2,8 +2,8 @@ import waterGlass from "@/assets/water-glass.png";
 
 const WaterCompositionSection = () => {
   return (
-    <section className="py-24 bg-background overflow-hidden">
-      <div className="container mx-auto px-4">
+    <section className="section-pad bg-background overflow-hidden">
+      <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-6">
           <h2 className="font-heading font-extrabold text-3xl md:text-4xl text-heading mb-2">
             SELCO Basic Water Composition

@@ -42,8 +42,8 @@ const TestimonialsSection = () => {
   const next = () => setCurrent((current + 1) % testimonials.length);
 
   return (
-    <section className="py-24 bg-section-bg">
-      <div className="container mx-auto px-4">
+    <section className="section-pad bg-section-bg">
+      <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-14">
           <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase text-primary bg-primary/10 mb-4">
             Testimonials

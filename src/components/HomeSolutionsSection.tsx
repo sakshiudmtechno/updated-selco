@@ -33,8 +33,8 @@ const products = [
 
 const HomeSolutionsSection = () => {
   return (
-    <section className="py-24 bg-section-bg">
-      <div className="container mx-auto px-4 text-center">
+    <section className="section-pad bg-gradient-to-b from-section-bg to-background">
+      <div className="container mx-auto px-4 md:px-6 text-center">
         <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase text-primary bg-primary/10 mb-4">
           What We Offer
         </span>
@@ -44,7 +44,7 @@ const HomeSolutionsSection = () => {
         <p className="text-body max-w-2xl mx-auto mb-14">
           Discover SELCO's complete range of chemical-free water treatment solutions designed for every need.
         </p>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {products.map((p) => (
             <Link
               to={p.link}
